@@ -35,5 +35,3 @@
 * It is commonly used for live streaming and gaming where speed matters more than losing a few dropped frames.
 
 # FTP (File Transfer Protocol)
-
-
