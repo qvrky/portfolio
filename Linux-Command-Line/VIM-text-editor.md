@@ -17,8 +17,8 @@
 
 * dd - delete the current line selected
 * you can add numbers on the back of dd to remove X amount of lines. e.g.
-* dd3 - removes 3 lines
-* dd2 - removes 2 lines
+dd3 - removes 3 lines
+dd2 - removes 2 lines
 
 To undo something, make sure you're in command mode, and press 'u', and keep clicking it until you have removed all the mistakes, to do the opposite, lets say you undo and want to redo what you just got rid of, use 'ctrl + r' which will redo whatever you undid
 searching - to search for a specific thing, like the word 'dog', type - '/' and then the thing you want to search, so '/dog'. this will highlight the word almost instantly, but when you press enter it will take your cursor to the searched word(s). Use 'n' to navigate through the searched word, for example there is 3 of the word "dog", searching with / will show you the first one, using n will go to the next, then again to the next, until there isnt anymore it will bring you back to the original one, it basically cycles through what you searched.
