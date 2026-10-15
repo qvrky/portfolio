@@ -27,6 +27,6 @@ search and replace - make sure you're in command mode and type a colon ':', then
 
 * so it would look like: :%s/dog/cat/g (automatically change each string of 'dog' to 'cat') 
 
-**or**
+                                    **or**
 
 * :%s/dog/cat/gc (ask for confirmation each time it tries changing 'dog' to 'cat')
