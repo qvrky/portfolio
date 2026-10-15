@@ -1,21 +1,8 @@
-# Core Networking & Internet Protocols
+# Internet Protocols
 
-# Domain Name System (DNS)
-* DNS is essentially a phonebook with corresponding domain names and IP addresses. This protocol often uses UDP/53.
-* How it works (The Chain):
-  1. The computer checks its local cache.
-  2. If missing, it asks the recursive resolver (like 8.8.8.8 or 1.1.1.1).
-  3. The resolver acts as the middleman, asking the root server. The root server doesn't actually know the IPs of anything; it just knows who does.
-  4. The Root points to the TLD server (Top Level Domain like '.com', '.co.uk').
-  5. The TLD points to the authoritative name server for that specific site.
-  6. The IP address is retrieved, cached, and sent back to the browser.
+## Transmission Protocols: TCP vs. UDP
 
-# Network Address Translation (NAT)
-* There is a problem with IPv4, there aren't enough public IPv4 addresses for every device on Earth. So we came up with a solution. NAT. NAT allows an entire home router network to share one public IP address.
-* How it works: The router acts as a gatekeeper. It saves your local device's internal IP in a NAT Translation Table, swaps it for the router's public IP, sends the packet out, and uses the table to route the returning data back to the exact phone or laptop that asked for it.
-
-# Transmission Protocols: TCP vs. UDP
-## TCP (Transmission Control Protocol)
+### TCP (Transmission Control Protocol)
 * TCP is the reliable mailman. Slower but much more reliable.
 * The 3-Way Handshake: Before any data is sent, TCP establishes a connection:
   1. SYN: Client asks to synchronise.
@@ -24,8 +11,14 @@
 * Why it's reliable: data is split into numbered pieces (sequence numbers). The receiver acknowledges what arrives, asks again for any missing piece, and puts everything back in order, like a puzzle.
 * Note: TCP retransmits lost data, but if the connection breaks entirely, nothing is guaranteed.
 
-## UDP (User Datagram Protocol)
+### UDP (User Datagram Protocol)
 * UDP is the less reliable, but fast mailman. Instead of performing a handshake, it just shouts the data out not worrying if anything is listening for it.
 * It is commonly used for live streaming and gaming where speed matters more than losing a few dropped frames.
 
-# FTP (File Transfer Protocol)
+## FTP (File Transfer Protocol)
+
+## SSH (Super Secure Shell)
+
+## HTTP (Hyper Text Transfer Protocol)
+
+## HTTPS (Hyper Text Transfer Protocol Secure)

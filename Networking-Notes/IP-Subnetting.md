@@ -10,12 +10,14 @@ An IP address consists of two parts:
 
 Every network has a unique address. The host address (or host ID) is what's assigned to hosts within that network, such as computers, phones, laptops, routers, etc. So, every host will have a unique host address.
 
-### How do we tell which portion is for the network and which is for the host?
+## How do we tell which portion is for the network and which is for the host?
+
 This is where a subnet mask becomes important. A subnet mask is a number that resembles an IP address, and it shows how many bits in the IP address belong to the network. It does this by masking the network portion of the IP address.
 
 ---
 
-### Translating to Binary
+## Translating to Binary
+
 Computers and networks don't understand numbers or words, only binary and bits. So how do we translate an IP address to binary?
 
 This is an 8-bit octet chart:
@@ -33,7 +35,7 @@ The first octet here is **192**. To get a binary number out of **192**, you need
 
 Here you can see that **128 + 64 = 192**, so those two bits need to be **1**. The rest are left out because they don't add into **192**.
 
-#### CHALLENGE:
+### CHALLENGE:
 Work out the next 3 octets with no help.
 
 **Results:**
@@ -48,12 +50,13 @@ Work out the next 3 octets with no help.
               0     0    0    0   0   0   0   0 
 
 
-My results for **192.168.1.0** ----> **11000000 10101000 00000001 00000000**
+My results for **192.168.1.0** ----> **11000000.10101000.00000001.00000000**
 *This is correct.*
 
 ---
 
 ### Subnet Mask Conversion
+
 The subnet mask conversion works the exact same way. So if we wanted to translate the subnet mask **255.255.255.0**:
 
 "255"  ->  | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 | 
@@ -66,27 +69,27 @@ The subnet mask conversion works the exact same way. So if we wanted to translat
               0     0    0    0   0   0   0   0  
 
 So it would be:
-**255.255.255.0** ------> **11111111 11111111 11111111 00000000**
+**255.255.255.0** ------> **11111111.11111111.11111111.00000000**
 
 ---
 
 ### Comparing the IP and Subnet Mask
 
 If we compare the IP and subnet mask in binary, we get:
-* **192.168.1.0**   ------> **11000000 10101000 00000001 00000000**
-* **255.255.255.0** ------> **11111111 11111111 11111111 00000000**
+* **192.168.1.0**   ------> **11000000.10101000.00000001.00000000**
+* **255.255.255.0** ------> **11111111.11111111.11111111.00000000**
 
 To tell which portion of the IP is the network part, you line the binary up. Everywhere there is a **1** in the subnet mask, you cross that number out. Everywhere there is a **0**, don't cross it out. 
 
 The results:
-* **192.168.1.0**   ------> **//////// //////// //////// 00000000**
-* **255.255.255.0** ------> **11111111 11111111 11111111 00000000**
+* **192.168.1.0**   ------> **////////.////////.////////.00000000**
+* **255.255.255.0** ------> **11111111.11111111.11111111.00000000**
 
 This shows that the first 3 octets of the IP address are the network portion, and the remaining octet is the host portion. **1**s in the subnet mask represent the network address, and **0**s indicate the host address. 
 
 #### Second Example:
-* **172.17.10.3** ------> **10101100 00010001 00001010 00000011**
-* **255.255.0.0** ------> **11111111 11111111 00000000 00000000**
+* **172.17.10.3** ------> **10101100.00010001.00001010.00000011**
+* **255.255.0.0** ------> **11111111.11111111.00000000.00000000**
 
 Here, **172.17.x.x** belongs to the network, and **x.x.10.3** belongs to the host. This is the depth of subnetting but in its most basic form: where there is a **255**, that number stays and belongs to the network, and where there is a **0**, that number changes for each different host on the network.
 
