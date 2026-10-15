@@ -10,12 +10,6 @@
   5. The TLD points to the authoritative name server for that specific site.
   6. The IP address is retrieved, cached, and sent back to the browser.
 
-# IP Addressing & Subnetting
-* Internet Protocol (IP): A unique mailing address for your device so packets know where to land.
-* IPv4 Structure: An IP address, e.g. 192.132.145.3, consists of 32 bits split into 4 octets. These octets are separated by '.'.
-* The Subnet Mask: A subnet mask, e.g. 255.255.255.0, tells the computer which part of the IP belongs to the network (the street name) and which part belongs to the host device (the house number). 
-* Example: A mask of '255.255.255.0' means the first three octets belong to the network, and the last octet is the individual machine.
-
 # Network Address Translation (NAT)
 * There is a problem with IPv4, there aren't enough public IPv4 addresses for every device on Earth. So we came up with a solution. NAT. NAT allows an entire home router network to share one public IP address.
 * How it works: The router acts as a gatekeeper. It saves your local device's internal IP in a NAT Translation Table, swaps it for the router's public IP, sends the packet out, and uses the table to route the returning data back to the exact phone or laptop that asked for it.

@@ -1,8 +1,8 @@
 # What is a Subnet Mask?
 
-First, you have to understand what an IP address is. An IP address is an identifier for a computer or device on a network. Every device has to have an IP address for communication purposes, so packets of data can be sent and received correctly. 
+First, you have to understand what an IP address is. Internet Protocol (IP) is a unique mailing address for your device so packets know where to land. Every device has to have an IP address to communicate with other devices, so packets of data can be sent and received correctly. 
 
-The specific IP address type is IPv4. An IPv4 address is a 32-bit numeric address written as 4 groups of numbers separated by a full stop. Each group of numbers is called an octet, so an IPv4 address has 4 octets and usually looks something like `192.168.10.1`. In this example, `192` is a single octet, `168` is another, etc. The number range in each octet is 0–255, which gives you 256 possible values. 
+The specific IP address type is IPv4. An IPv4 address is a 32-bit numeric address written as 4 groups of numbers separated by a full stop. Each group of numbers is called an octet, so an IPv4 address has 4 octets and usually looks something like `192.168.10.1`. In this example, `192` is a single octet, `168` is another, etc. The number range in each octet is 0 - 255, which gives you 256 possible values. 
 
 An IP address consists of two parts: 
 * **First part** - Network address
@@ -114,3 +114,4 @@ The router can only do this due to 2 concepts:
 * **NAT** - Network Address Translation
 
 These topics are more discussed in their named files.
+
